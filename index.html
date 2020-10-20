@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tareas</h1>
+    <table id="tablaTareas">
+
+    </table>
+    <a href="add.html"><button><h2>Nueva Tarea</h2></button></a>
+    <h2>Editar</h2>
+    <form action="edit.html">
+        ID tarea a editar:
+        <input type="number" name="id" min="0" step="1" required>
+        <button type="submit">Editar</button>
+    </form>
+    
+    <script src="dom.js"></script>
+    <script src="tareas.js"></script>
+    <script src="readParameters.js"></script>
+    <script src="controllerIndex.js"></script>
+</body>
+</html>
