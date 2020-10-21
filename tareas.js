@@ -17,6 +17,7 @@ function addTarea(fecha, materia, descripcion, realizada) {
 }
 function deleteTarea(id) {
   // Función que elimina la tarea con el id dado
+  console.log("Borrando tarea con el id " + id);
   let index = -1;
   for (let i = 0; i < tareas.length; i++) {
     if (tareas[i].id == id) index = i;

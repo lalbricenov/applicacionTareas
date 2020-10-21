@@ -1,6 +1,6 @@
 let numParametros = Object.keys(parameters).length;
-console.log(numParametros);
-console.log(parameters);
+// console.log(numParametros);
+// console.log(parameters);
 if (numParametros == 4) {
   console.log("Se va a crear una nueva tarea");
   addTarea(
@@ -18,9 +18,13 @@ if (numParametros == 4) {
     parameters.realizada
   );
 }
-// window.location.replace("index.html");
-// window.history.replaceState({}, document.title, "/" + "my-new-url.html");
 window.history.pushState({}, document.title, "index.html");
 // console.log(document.title);
+
+let deleteForm = document.querySelector("#deleteForm");
+deleteForm.onsubmit = () => {
+  deleteTarea(document.querySelector("#deleteForm input[name='id']").value);
+  updateTableHtml(tareas);
+};
 
 updateTableHtml(tareas);
